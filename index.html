@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Timer</title>
 </head>
-<body>
-<header><h1>Hello from Header</h1></header>
-<main></main>
-<footer><h1>Footer</h1></footer>  
+<body style="max-height: 100vh;">
+  <header>
+    <h1 class="center">Hello from Header</h1>
+  </header>
+  <main>
+    <div class="toggle-btns">
+      <button id="timer-btn" onclick="showTimer()">Show Timer</button>
+      <button id="stopwatch-btn" onclick="showStopwatch()">Show Stopwatch</button>
+    </div>
+    <div class="timer" id="timer" style="display: block;">
+      <h1>Timer</h1>
+      <div id="timer-display">00:00:00</div>
+      <button id="start-timer-btn">Start</button>
+      <button id="reset-timer-btn">Reset</button>
+    </div>
+
+    <div class="stopwatch" id="stopwatch" style="display: none;">
+      <h1>Stopwatch</h1>
+      <div id="stopwatch-display">00:00:00</div>
+      <button id="start-stopwatch-btn">Start</button>
+      <button id="reset-stopwatch-btn">Reset</button>
+    </div>
+  </main>
+  <footer>
+    <h1 class="center">Footer</h1>
+  </footer>
+  <script src="index.js"></script>
 </body>
 </html>
