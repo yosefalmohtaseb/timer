@@ -2,6 +2,7 @@
 let timer;
 let timerDisplay = document.getElementById("timer-display");
 let startTimerButton = document.getElementById("start-timer-btn");
+let stopTimerBtn = document.getElementById("stop-timer-btn");
 let resetTimerButton = document.getElementById("reset-timer-btn");
 let timerSeconds = 0;
 
@@ -31,6 +32,11 @@ function updateTimer() {
     minutes
   )}:${formatTime(seconds)}`;
 }
+
+function stopTimer() {
+  clearInterval(timer);
+}
+
 
 function resetTimer() {
   clearInterval(timer);
@@ -73,6 +79,7 @@ function formatTime(time) {
 
 // Event listeners
 startTimerButton.addEventListener("click", startTimer);
+stopTimerBtn.addEventListener("click", stopTimer);
 resetTimerButton.addEventListener("click", resetTimer);
 startStopwatchButton.addEventListener("click", startStopwatch);
 resetStopwatchButton.addEventListener("click", resetStopwatch);
